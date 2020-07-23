@@ -1,0 +1,41 @@
+.features {
+    .container {
+        padding-bottom: 0;
+    }
+}
+.features {
+    &-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-item {
+        width: 270px;
+    }
+}
+.features {
+    &-image {
+        @include centeredflex;
+        height: 120px;
+        background-color: $main-6-color;
+        border-radius: 4px;
+    }
+}
+.icon {
+    width: 70px;
+    height: 70px;
+}
+.features-item {
+    &-title {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    &-text {
+        color: $main-4-color;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+    }
+}

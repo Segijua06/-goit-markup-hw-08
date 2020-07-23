@@ -1,0 +1,138 @@
+.footer {
+    background-color: $main-5-color;
+    .logo {
+        @extend %inverse;
+    }
+    .inverse {
+        color: $main-3-color;
+    }
+}
+
+.footer {
+    &-content {
+        display: flex;
+        padding-top: 60px;        
+        padding-bottom: 60px;
+    }
+    &-contacts {
+        margin-right: 69px;
+    }
+}
+.address {
+    margin-top: 20px;
+    font-style: normal;
+    &-item {
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+    }
+    &-item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+}
+
+.address {
+    &-item {
+        a {
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+} 
+.footer-call {
+    @extend %inverse;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+}
+
+.join-social-network {      
+    margin-right: 94px;
+}
+
+.join-social-network,
+.subscribe {
+    padding-top: 12px;    
+}
+
+.footer {
+    .social {
+        padding-top: 20px;
+    }
+}
+
+.subscribe  {
+    &-form {
+        @include flex;
+        margin-top: 20px;
+    }
+}
+
+.footer {
+    &-label {
+        position: relative;
+    }
+    &-input {
+        min-width: 358px;
+        min-height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        background-color: $main-5-color;
+        margin-right: 12px;
+        color: $main-3-color;
+        transform: scaleY(50%);
+    }
+}
+.email {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: $animation;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+}
+
+.footer {
+    &-input:focus + .email,
+    &-input:not(:placeholder-shown) + .email {
+        transform: translateY(-35px);
+        }
+    &-label:focus-within > &-input{
+        outline: none;
+        border-color: $main-2-color;
+    }
+}
+
+.subscribe {
+    &-button {
+        padding: 10px 10px 10px 29px;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.06em;
+    }
+    &-svg {
+        margin-right: 28px;
+    }
+}
+
+.button {
+    &-footer {
+        @include flex;
+        background-color: $main-2-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        border: 0;
+        color: $main-3-color;
+        fill: $main-3-color;
+        transition: $animation;
+        cursor: pointer;
+    }
+    &-footer:hover, &-footer:focus {
+        background-color: $main-3-color;
+        fill: $main-2-color;
+        color: $main-2-color;
+    }
+}

@@ -1,0 +1,42 @@
+.clients {
+    &-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-item:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+.clients {
+    &-icon {
+        fill: $main-9-color;
+        transition: $animation;
+    }
+}
+
+.clients-item {
+    a {
+        @include centeredflex;
+        width: 170px; 
+        height: 90px;
+        border: 1px solid $main-9-color;
+        border-radius: 4px;  
+        transition: $animation;
+    }
+    a:hover, a:focus {
+        fill: $main-2-color;
+        border-color: $main-2-color;
+        .clients-icon {
+            fill: $main-2-color;
+        }
+    }
+}
+// .clients-item {
+//     a:hover, a:focus {
+//         fill: $main-2-color;
+//         border-color: $main-2-color;
+//         .clients-icon {
+//             fill: $main-2-color;
+//         }
+//     }
+// }
