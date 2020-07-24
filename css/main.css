@@ -76,19 +76,19 @@ ul {
   margin: 0px auto 0px auto;
 }
 
-@media (min-width: 480px) {
+@media screen and (min-width: 480px) {
   .container {
     width: 480px;
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .container {
     width: 768px;
   }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
   }
@@ -104,10 +104,18 @@ footer .container {
   color: black;
   font-weight: 700;
   padding-bottom: 50px;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 28px;
+  line-height: 33px;
   letter-spacing: 0.03em;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+  }
 }
 
 .header-logo {
@@ -121,9 +129,16 @@ footer .container {
   font-family: 'Raleway';
   color: black;
   text-decoration: none;
-  font-size: 26px;
-  line-height: 31px;
+  font-size: 24px;
+  line-height: 28px;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 31px;
+  }
 }
 
 .web {
@@ -132,10 +147,17 @@ footer .container {
 
 header {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 21px;
   letter-spacing: 0.02em;
   font-family: "Roboto";
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .header-content {
@@ -295,11 +317,18 @@ header {
   padding-top: 200px;
   margin: 0 0 30px 0;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 60px;
+  font-size: 26px;
+  line-height: 42px;
   letter-spacing: 0.06em;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 60px;
+  }
 }
 
 .hero .button {
@@ -550,17 +579,47 @@ header {
   padding-bottom: 0;
 }
 
-.features-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .features-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .features-item {
-  width: 270px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .features-item {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-item {
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .features-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .features-image {

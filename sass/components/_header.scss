@@ -1,9 +1,14 @@
 header {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    font-weight: 500;    
+    font-size: 18px;
+    line-height: 21px;
     letter-spacing: 0.02em;
     font-family: "Roboto";
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 16px;
+    }
 }
 .header-content {
     @include flex;
