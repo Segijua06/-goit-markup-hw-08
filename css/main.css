@@ -72,7 +72,10 @@ ul {
 }
 
 .container {
-  padding: 94px 15px 94px 15px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin: 0px auto 0px auto;
 }
 
@@ -90,6 +93,8 @@ ul {
 
 @media screen and (min-width: 1200px) {
   .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
     width: 1200px;
   }
 }
@@ -167,6 +172,18 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
 }
 
 .nav-list {
@@ -305,8 +322,21 @@ header {
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1600px;
-  height: 600px;
+  width: 480px;
+  height: 400px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    width: 1600px;
+    height: 600px;
+  }
 }
 
 .hero .container {
@@ -314,7 +344,7 @@ header {
 }
 
 .hero-title {
-  padding-top: 200px;
+  padding-top: 118px;
   margin: 0 0 30px 0;
   font-weight: 900;
   font-size: 26px;
@@ -326,6 +356,7 @@ header {
 
 @media screen and (min-width: 1200px) {
   .hero-title {
+    padding-top: 200px;
     font-size: 44px;
     line-height: 60px;
   }
@@ -575,8 +606,10 @@ header {
   fill: #2196F3;
 }
 
-.features .container {
-  padding-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .features .container {
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -601,12 +634,12 @@ header {
 }
 
 .features-item {
-  width: 100%;
+  width: 450px;
 }
 
 @media screen and (min-width: 768px) {
   .features-item {
-    margin-right: 30px;
+    width: 354px;
   }
 }
 
@@ -619,6 +652,24 @@ header {
 @media screen and (max-width: 767px) {
   .features-item:not(:last-child) {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .features-item:nth-child(2n) {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .features-item:nth-child(n + 3) {
+    margin-top: 30px;
   }
 }
 
@@ -650,11 +701,23 @@ header {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .features-item-title {
+    text-align: center;
+  }
+}
+
 .features-item-text {
   color: #757575;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 1199px) {
+  .tech-skills {
+    display: none;
+  }
 }
 
 .tech-skills-list {
