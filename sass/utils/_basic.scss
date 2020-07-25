@@ -19,6 +19,9 @@ p {
 }
 body {
     font-family: $my-font;
+    &.modal-open {
+        overflow: hidden;
+    }
 }
 
 img {

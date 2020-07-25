@@ -36,6 +36,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -107,7 +111,7 @@ footer .container {
 .title {
   color: black;
   font-weight: 700;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   font-size: 28px;
   line-height: 33px;
   letter-spacing: 0.03em;
