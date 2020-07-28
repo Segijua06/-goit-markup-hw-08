@@ -1,5 +1,6 @@
 .footer {
     background-color: $main-5-color;
+    width: 100%;
     .logo {
         @extend %inverse;
     }
@@ -76,7 +77,8 @@
         position: relative;
     }
     &-input {
-        min-width: 358px;
+        // min-width: 358px;
+        width: 100%;
         min-height: 50px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
