@@ -13,17 +13,23 @@ header {
 }
 .header-content {
     @include flex;
+    @media screen and (max-width: 767px) {
+        justify-content: space-between;
+    }
+    
 }
 
 .menu-button {
-    // position: absolute;
-    // top: 22px;
-    // right: 23px;
     display: inline-flex;
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
     .icon-close {
         display: none;
     }
@@ -43,34 +49,41 @@ header {
 }
 
 .menu-container {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    
     background-color: $main-3-color;
-    // color: blueviolet;
     text-align: center;
-    &.is-open {
-        display: block;
-        // z-index: 4;
+    
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        &.is-open {
+            display: block;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
     }
 }
-// .menu {
-//     display: flex;
-//     @media screen and (max-width: 1199px) {
-//         display: none;
-//     }
-// }
-// .nav-list {
-//     @include flex;    
-// }
 
-// .nav-item:not(:last-child) {
-//     margin-right: 50px;
-// }
+.nav-list {
+    @media screen and (min-width: 768px) {
+        @include flex; 
+    }
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 50px;
+}
 
 .nav-item  {
+    &:not(:last-child) {
+        @media screen and (min-width: 768px) {
+            margin-right: 50px;
+        }
+    }
     a {
         color: $main-1-color;
     }    
@@ -120,11 +133,20 @@ header {
 }
 
 .contacts-list {
+    @media screen and (min-width: 768px) {
+        // display: block;
+        margin-left: 84px;
+    }
+    @media screen and (min-width: 1200px) {
+        // display: block;
+        margin-left: 305px;
+    }
     // @include flex;
-    margin-left: auto;
+    // margin-left: auto;
 }
 
 .contacts-item {
+    // width: 100%;
     // @include flex;
     // padding-top: 32px;
     // padding-bottom: 32px;  
@@ -156,5 +178,5 @@ header {
 
 .icon-header {
     // @include flex;
-    // margin-right: 10px;    
+    margin-right: 8px;    
 }

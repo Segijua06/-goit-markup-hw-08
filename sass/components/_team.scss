@@ -47,6 +47,10 @@
     }
 }
 .team-item {
+    @media screen and (min-width: 480px) {
+        width: 450px;
+        // height: 422px;
+    }
     @media screen and (min-width: 768px) {
         width: 354px;
         // height: 422px;
