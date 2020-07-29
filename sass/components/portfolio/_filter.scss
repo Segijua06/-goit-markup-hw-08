@@ -30,6 +30,9 @@
 }
 
 .filter-item {
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 21px;
+    }
     .button {
         margin: 0;
         padding: 6px 22px;
