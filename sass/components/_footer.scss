@@ -1,4 +1,5 @@
 .footer {
+    
     background-color: $main-5-color;
     width: 100%;
     .logo {
@@ -11,16 +12,25 @@
 
 .footer {
     &-content {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            display: flex;
+            flex-wrap: wrap;
+            // align-items: center;
+            justify-content: center;
+        }
         @media screen and (max-width: 1199px) {
             text-align: center;
         }
-        
-        // display: flex;
+        @media screen and (min-width: 1200px) {
+            display: flex;
+        }
         padding-top: 60px;        
         padding-bottom: 60px;
     }
     &-contacts {
-        margin-right: 69px;
+        @media screen and (min-width: 1200px) {
+            margin-right: 69px;
+        } 
     }
 }
 .address {
@@ -43,20 +53,31 @@
         }
     }
 } 
-.footer-call {
+.subscribe-title,
+.join-title {
     @extend %inverse;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
 }
 
-.join-social-network {      
-    margin-right: 94px;
+.join-social-network {  
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: 165px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 94px;
+    }
 }
 
 .join-social-network,
 .subscribe {
-    padding-top: 12px;    
+    @media screen and (max-width: 767px) {
+        padding-top: 60px; 
+    }
+    @media screen and (min-width: 1200px) {
+        padding-top: 12px; 
+    }
 }
 
 .footer {
@@ -66,9 +87,17 @@
 }
 
 .subscribe  {
-    &-form {
-        // @include flex;
-        margin-top: 20px;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 35px;
+    }
+    // &-form {
+    //     // @include flex;
+    //     margin-top: 20px;
+    // }
+    &-title {
+        margin-bottom: 20px;
     }
 }
 
@@ -77,8 +106,16 @@
         position: relative;
     }
     &-input {
-        // min-width: 358px;
-        width: 100%;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+        @media screen and (min-width: 768px) {
+            width: 450px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 358px;
+        }
+        
         min-height: 50px;
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -89,9 +126,11 @@
         transform: scaleY(50%);
     }
 }
+
 .email {
+    
     position: absolute;
-    top: 5px;
+    top: 2px;
     left: 16px;
     color: rgba(255, 255, 255, 0.6);
     transition: $animation;
@@ -99,18 +138,59 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.03em;
+    
 }
+// начало
+.footer-input {
+    display: block;
+    padding: 15px 16px;
+    width: 100%;
+    height: 50px;
 
-.footer {
-    &-input:focus + .email,
-    &-input:not(:placeholder-shown) + .email {
-        transform: translateY(-40px);
+    background-color: $main-5-color;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+        @media screen and (min-width: 768px) {
+            width: 450px;
         }
-    &-label:focus-within > &-input{
-        outline: none;
-        border-color: $main-2-color;
+        @media screen and (min-width: 1200px) {
+            width: 358px;
+            margin-bottom: 0;
+            margin-right: 12px;
+        }
+
+        
+
+        &:focus,
+        &:active {
+            outline: transparent;
+            border: 1px solid $main-2-color;
+        }
     }
-}
+
+//конец
+
+
+// .footer {
+//     &-input:focus + .email,
+//     &-input:not(:placeholder-shown) + .email {
+//         transform: translateY(-40px);
+//         }
+//     &-label:focus-within > &-input{
+//         outline: none;
+//         border-color: $main-2-color;
+//     }
+// }
 
 .subscribe {
     @media screen and (max-width: 1199px) {
