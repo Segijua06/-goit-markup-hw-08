@@ -87,6 +87,10 @@
 }
 
 .subscribe  {
+    &-title {
+        cursor: pointer;
+    }
+    
     @media screen and (min-width: 1200px) {
         display: flex;
         align-items: flex-end;
@@ -106,6 +110,7 @@
         position: relative;
     }
     &-input {
+        cursor: pointer;
         @media screen and (max-width: 767px) {
             width: 100%;
         }
@@ -140,7 +145,7 @@
     letter-spacing: 0.03em;
     
 }
-// начало
+
 .footer-input {
     display: block;
     padding: 15px 16px;
@@ -177,20 +182,6 @@
             border: 1px solid $main-2-color;
         }
     }
-
-//конец
-
-
-// .footer {
-//     &-input:focus + .email,
-//     &-input:not(:placeholder-shown) + .email {
-//         transform: translateY(-40px);
-//         }
-//     &-label:focus-within > &-input{
-//         outline: none;
-//         border-color: $main-2-color;
-//     }
-// }
 
 .subscribe {
     @media screen and (max-width: 1199px) {
