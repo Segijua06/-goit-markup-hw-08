@@ -999,40 +999,9 @@ header {
   color: #757575;
 }
 
-@media screen and (min-width: 480px) {
-  .team-item {
-    width: 450px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .team-item {
-    width: 354px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team-item {
-    width: 270px;
-  }
-}
-
-.team-item-photo img {
-  width: 450px;
-  height: 320px;
-}
-
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .team-item-photo img {
-    width: 354px;
-    height: 260px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team-item-photo img {
-    width: 270px;
-    height: 260px;
+  .team-item {
+    width: calc((100% - 30px * 2 ) / 2);
   }
 }
 

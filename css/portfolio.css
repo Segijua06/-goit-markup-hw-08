@@ -537,14 +537,6 @@ header {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .portfolio {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
 .portfolio-item {
   margin-right: 30px;
   border: 1px solid #EEEEEE;
